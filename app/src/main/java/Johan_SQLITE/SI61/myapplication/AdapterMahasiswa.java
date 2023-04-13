@@ -2,29 +2,26 @@ package Johan_SQLITE.SI61.myapplication;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class AdapterMahasiswa extends RecyclerView.Adapter<AdapterMahasiswa.ViewHolderDestinasi> {
+public class AdapterMahasiswa extends RecyclerView.Adapter<AdapterMahasiswa.ViewHolderMahasiswa> {
     private Context ctx;
-    private ArrayList arrID,arrNama, arrAlamat, arrJam;
+    private ArrayList arrID,arrNpm, arrNama, arrProdi;
 
-    public AdapterMahasiswa(Context ctx, ArrayList arrID,ArrayList arrNama, ArrayList arrAlamat, ArrayList arrJam) {
+    public AdapterMahasiswa(Context ctx, ArrayList arrID,ArrayList arrNpm, ArrayList arrNama, ArrayList arrProdi) {
         this.ctx = ctx;
         this.arrID = arrID;
+        this.arrNpm = arrNpm;
         this.arrNama = arrNama;
-        this.arrAlamat = arrAlamat;
-        this.arrJam = arrJam;
+        this.arrProdi = arrProdi;
     }
 
     @NonNull
@@ -35,27 +32,27 @@ public class AdapterMahasiswa extends RecyclerView.Adapter<AdapterMahasiswa.View
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolderDestinasi holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolderMahasiswa holder, int position) {
         holder.tvID.setText(arrID.get(position).toString());
+        holder.tvNpm.setText(arrNpm.get(position).toString());
         holder.tvNama.setText(arrNama.get(position).toString());
-        holder.tvAlamat.setText(arrAlamat.get(position).toString());
-        holder.tvJam.setText(arrJam.get(position).toString());
+        holder.tvProdi.setText(arrProdi.get(position).toString());
     }
 
     @Override
     public int getItemCount() {
-        return arrNama.size();
+        return arrNpm.size();
     }
 
-    public class ViewHolderDestinasi extends RecyclerView.ViewHolder {
-        TextView tvID,tvNama, tvAlamat, tvJam;
+    public class ViewHolderMahasiswa extends RecyclerView.ViewHolder {
+        TextView tvID,tvNpm, tvNama, tvProdi;
 
-        public ViewHolderDestinasi(@NonNull View itemView) {
+        public ViewHolderMahasiswa(@NonNull View itemView) {
             super(itemView);
             tvID = itemView.findViewById(R.id.tv_ID);
+            tvNpm = itemView.findViewById(R.id.tv_NPM);
             tvNama = itemView.findViewById(R.id.tv_nama);
-            tvAlamat = itemView.findViewById(R.id.tv_alamat);
-            tvJam = itemView.findViewById(R.id.tv_jam);
+            tvProdi = itemView.findViewById(R.id.tv_prodi);
 
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override

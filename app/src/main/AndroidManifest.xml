@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Johan_SQLITE"
         tools:targetApi="31">
         <activity
-            android:name=".activity_tambah"
+            android:name=".TambahActivity"
             android:exported="false" />
         <activity
             android:name=".list_item_mahasiswa"

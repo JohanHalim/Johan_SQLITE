@@ -60,8 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         SQLiteToArrayList();
 
-        adMahasiswa = new AdapterMahasiswa(MainActivity.this,
-                arrID,arrNpm, arrNama, arrProdi;
+        adMahasiswa = new AdapterMahasiswa(MainActivity.this,arrID,arrNpm, arrNama, arrProdi);
         rvMahasiswa.setLayoutManager(new LinearLayoutManager(MainActivity.this));
         rvMahasiswa.setAdapter(adMahasiswa);
     }

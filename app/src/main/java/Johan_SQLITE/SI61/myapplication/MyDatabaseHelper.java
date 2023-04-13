@@ -36,7 +36,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         String query = "CREATE TABLE " + TABLE_NAME + " (" +
                 FIELD_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 FIELD_NPM + " CHAR(10), " +
-                FIELD_NAMA + " VARCHAR(75), " +
+                FIELD_NAMA + " VARCHAR(55), " +
                 FIELD_PRODI + " VARCHAR(75)" +
                 ");"
                 ;

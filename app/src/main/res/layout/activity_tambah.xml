@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tambah Destinasi"
+        android:text="Tambah Mahasiswa"
         android:textSize="25sp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
@@ -20,24 +20,24 @@
         />
 
     <EditText
+        android:id="@+id/et_npm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Npm "
+        android:textSize="21sp"/>
+
+    <EditText
         android:id="@+id/et_nama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nama Destinasi"
+        android:hint="Nama"
         android:textSize="21sp"/>
 
     <EditText
-        android:id="@+id/et_alamat"
+        android:id="@+id/et_prodi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Alamat"
-        android:textSize="21sp"/>
-
-    <EditText
-        android:id="@+id/et_jam"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Jam Operasional"
+        android:hint="Prodi"
         android:textSize="21sp"/>
 
     <Button

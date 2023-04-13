@@ -8,10 +8,10 @@
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_destinasi"
+        android:id="@+id/rv_mahasiswa"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/list_item_destinasi"/>
+        tools:listitem="@layout/activity_list_item_mahasiswa"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_tambah"
